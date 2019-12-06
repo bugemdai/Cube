@@ -1,0 +1,57 @@
+﻿  Cube.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h(130,1): warning C4005: APIENTRY: изменение макроопределения
+E:\Учеба\5 семестр\ООП\курсовая\Cube\packages\glfw.3.3.0.1\build\native\include\GLFW\glfw3.h(104): message : см. предыдущее определение "APIENTRY"
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(60,26): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(60,20): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(60,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(61,23): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(61,17): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(62,20): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(63,23): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(63,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(67,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(69,17): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(70,20): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(70,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(74,23): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(74,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(75,20): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(77,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(81,20): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(81,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(82,17): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(83,23): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(83,17): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(84,26): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(84,20): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(84,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(88,23): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(88,17): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(89,17): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(91,20): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(95,20): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(95,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(96,26): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(96,20): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(96,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(97,23): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(97,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Element.h(98,14): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.h(64,117): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.h(64,78): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.h(64,39): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.h(82,29): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.h(96,29): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.h(110,29): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.cpp(28,21): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.cpp(29,12): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.cpp(30,12): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.cpp(51,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.cpp(53,44): warning C4305: инициализация: усечение из "double" в "float"
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.cpp(54,44): warning C4305: инициализация: усечение из "double" в "float"
+E:\Учеба\5 семестр\ООП\курсовая\Cube\Cube\Cube.cpp(55,46): warning C4305: инициализация: усечение из "double" в "float"
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 28 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  Cube.vcxproj -> E:\Учеба\5 семестр\ООП\курсовая\Cube\Release\Cube.exe
