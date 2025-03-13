@@ -7,40 +7,41 @@
 #include <ctime>
 #include <time.h>
 #include <stdlib.h>
+#include <GL/glut.h>
 
 #define CUBE_SIZE 10
-#define TIMER 1
+#define TIMER_INTERVAL 1
 
-unsigned int c[9] = { 0xFFFFFF, 0xFFFF00, 0x0000FF, 0x00FF00, 0xFF0000, 	0xCD853F };
+unsigned int faceColors[6] = { 0xFFFFFF, 0xFFFF00, 0x0000FF, 0x00FF00, 0xFF0000, 0xCD853F };
 
-GLfloat lightPos[] = { 0, 100, 200, 0 };
-int xRot = 24, yRot = 34, zRot = 0;
-double translateZ = -35.0;
+GLfloat lightPosition[] = { 0, 100, 200, 0 };
+int xRotation = 24, yRotation = 34;
+double zTranslation = -35.0;
 Cube cube;
-int timerOn = 0;
+int timerActive = 0;
 
 void display()
 {
 	glPushMatrix();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glColor3f(1, 0, 0);
-	glLightfv(GL_LIGHT0, GL_POSITION, lightPos);
-	glTranslatef(0, 0, translateZ);
-	glRotatef(xRot, 1, 0, 0);
-	glRotatef(yRot, 0, 1, 0);
+	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
+	glTranslatef(0, 0, zTranslation);
+	glRotatef(xRotation, 1, 0, 0);
+	glRotatef(yRotation, 0, 1, 0);
 	glTranslatef(CUBE_SIZE / -2.0, CUBE_SIZE / -2.0, CUBE_SIZE / -2.0);
 	cube.draw();
 	glPopMatrix();
 	glutSwapBuffers();
 }
 
-void reshape(int w, int h)
+void reshape(int width, int height)
 {
-	glViewport(0, 0, w, h);
+	glViewport(0, 0, width, height);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	GLfloat fAspect = (GLfloat)w / (GLfloat)h;
-	gluPerspective(60, fAspect, 1, 1000.0);
+	GLfloat aspectRatio = (GLfloat)width / (GLfloat)height;
+	gluPerspective(60, aspectRatio, 1, 1000.0);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }
@@ -48,13 +49,13 @@ void reshape(int w, int h)
 void init()
 {
 	glClearColor(0.5, 0.5, 0.5, 0.5);
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 
-	float mat_specular[] = { 0.3, 0.3, 0.3, 0 };
+	float specularMaterial[] = { 0.3, 0.3, 0.3, 0 };
 	float diffuseLight[] = { 0.2, 0.2, 0.2, 1 };
 	float ambientLight[] = { 0.9, 0.9, 0.9, 1.0 };
 	glShadeModel(GL_SMOOTH);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, specularMaterial);
 	glMateriali(GL_FRONT, GL_SHININESS, 128);
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseLight);
 	glLightfv(GL_LIGHT0, GL_AMBIENT, ambientLight);
@@ -64,73 +65,47 @@ void init()
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_LIGHTING);
 
-	cube.clear(CUBE_SIZE, c);
+	cube.clear(CUBE_SIZE, faceColors);
 }
 
 void specialKeys(int key, int, int)
 {
-	bool tmp = true;
-
-	if (key == GLUT_KEY_F5)
-	{
-		for (int i = 0; i < 1000000; i++)
-		{
-			yRot -= 3;
-			if (yRot < 0)
-				yRot += 360;
+	switch (key) {
+		case GLUT_KEY_F5:
+			for (int i = 0; i < 1000000; i++) {
+				yRotation = (yRotation - 3 + 360) % 360;
+				glutPostRedisplay();
+				Sleep(30);
+			}
+			break;
+		case GLUT_KEY_DOWN:
+			xRotation = (xRotation + 3) % 360;
 			glutPostRedisplay();
-			Sleep(30);
-		}
-	}
-
-	if (key == GLUT_KEY_DOWN)
-	{
-		xRot += 3;
-		if (xRot >= 360)
-			xRot -= 360;
-		glutPostRedisplay();
-	}
-
-	if (key == GLUT_KEY_UP)
-	{
-		xRot -= 3;
-		if (xRot < 0)
-			xRot += 360;
-		glutPostRedisplay();
-	}
-
-	if (key == GLUT_KEY_RIGHT)
-	{
-		yRot += 3;
-		if (yRot >= 360)
-			yRot -= 360;
-		glutPostRedisplay();
-	}
-
-	if (key == GLUT_KEY_LEFT)
-	{
-		yRot -= 3;
-		if (yRot < 0)
-			yRot += 360;
-		glutPostRedisplay();
-	}
-
-	if (key == GLUT_KEY_HOME)
-	{
-		translateZ += 5;
-		glutPostRedisplay();
-	}
-
-	if (key == GLUT_KEY_END)
-	{
-		translateZ -= 5;
-		glutPostRedisplay();
-	}
-
-	if (key == GLUT_KEY_F1)
-	{
-		cube.clear(CUBE_SIZE, c);
-		glutPostRedisplay();
+			break;
+		case GLUT_KEY_UP:
+			xRotation = (xRotation - 3 + 360) % 360;
+			glutPostRedisplay();
+			break;
+		case GLUT_KEY_RIGHT:
+			yRotation = (yRotation + 3) % 360;
+			glutPostRedisplay();
+			break;
+		case GLUT_KEY_LEFT:
+			yRotation = (yRotation - 3 + 360) % 360;
+			glutPostRedisplay();
+			break;
+		case GLUT_KEY_HOME:
+			zTranslation += 5;
+			glutPostRedisplay();
+			break;
+		case GLUT_KEY_END:
+			zTranslation -= 5;
+			glutPostRedisplay();
+			break;
+		case GLUT_KEY_F1:
+			cube.clear(CUBE_SIZE, faceColors);
+			glutPostRedisplay();
+			break;
 	}
 }
 
@@ -143,34 +118,37 @@ void keys(unsigned char key, int, int)
 	}
 }
 
-void mouse(int key, int state, int, int)
+void mouse(int button, int state, int, int)
 {
-	if (key == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
+	if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
 	{
-		timerOn = 1 - timerOn;
+		timerActive = 1 - timerActive;
 	}
 }
 
 void timer(int)
 {
-	glutTimerFunc(TIMER, timer, 0);
-	if (timerOn)
+	glutTimerFunc(TIMER_INTERVAL, timer, 0);
+	if (timerActive)
 	{
 		if (cube.current == -1)
+		{
 			keys(rand() % 6 + '0', 0, 0);
+		}
 		else
+		{
 			cube.Rotate(cube.current, 3);
+		}
 	}
-	else
+	else if (cube.current != -1)
 	{
-		if (cube.current != -1)
-			cube.Rotate(cube.current, 3);
+		cube.Rotate(cube.current, 3);
 	}
 	display();
 }
 
 void menuEvent(int option) {
-
+	// Placeholder for menu event handling
 }
 
 int main(int argc, char** argv)
@@ -179,7 +157,7 @@ int main(int argc, char** argv)
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_MULTISAMPLE);
 	glEnable(GLUT_MULTISAMPLE);	
 	glutInitWindowSize(800, 800);
-	glutInitWindowPosition(100, 1);
+	glutInitWindowPosition(100, 100);
 	glutCreateWindow("Cube");
 	
 	glutCreateMenu(menuEvent);
@@ -188,7 +166,7 @@ int main(int argc, char** argv)
 	glutReshapeFunc(reshape);
 	glutKeyboardFunc(keys);
 	glutMouseFunc(mouse);
-	glutTimerFunc(TIMER, timer, 0);
+	glutTimerFunc(TIMER_INTERVAL, timer, 0);
 	glutSpecialFunc(specialKeys);
 	glutMainLoop();
 	return 0;
